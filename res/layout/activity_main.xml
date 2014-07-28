@@ -1,11 +1,12 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="jp.ac.st.asojuku.original2014002.MainActivity"
-    tools:ignore="MergeRootFrame" >
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
 
     <TextView
         android:id="@+id/textView1"
@@ -13,56 +14,53 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_gravity="center"
+        android:layout_marginTop="36dp"
         android:text="今日の一言"
-        android:textSize="35sp" />
+        android:textSize="50sp" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
         android:layout_below="@+id/textView1"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="center"
-        android:text="ひとこと登録" />
+        android:text="ひとことを登録"
+        android:textSize="20sp" />
 
     <EditText
-        android:id="@+id/editText1"
-        android:layout_width="301dp"
-        android:layout_height="113dp"
-        android:layout_alignParentLeft="true"
+        android:id="@+id/EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/textView2"
-        android:ems="10" >
-
-        <requestFocus />
-    </EditText>
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editText1"
-        android:layout_toLeftOf="@+id/textView2"
-        android:text="Button"
-        android:textSize="25sp" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="44dp"
+        android:ems="10" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnMAINTE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button1"
-        android:layout_alignRight="@+id/editText1"
-        android:layout_below="@+id/button1"
-        android:layout_marginTop="54dp"
-        android:text="Button" />
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_below="@+id/EditText"
+        android:layout_marginTop="37dp"
+        android:text="メンテ" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnCHECK"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button1"
-        android:layout_alignBottom="@+id/button1"
-        android:layout_toRightOf="@+id/textView2"
-        android:text="Button" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="55dp"
+        android:text="ひとことチェック" />
+
+    <Button
+        android:id="@+id/btnENTRY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnMAINTE"
+        android:layout_alignBottom="@+id/btnMAINTE"
+        android:layout_alignRight="@+id/EditText"
+        android:text="登録" />
 
 </RelativeLayout>
