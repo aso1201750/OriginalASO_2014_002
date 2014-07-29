@@ -115,9 +115,8 @@ int lastPosition = -1;
 			sdb = helper.getWritableDatabase();
 		}catch(SQLiteException e){
 			Log.e("ERROR" , e.toString());
-			this.helper.deleteHitokoto(sdb, id);
 		}
+		this.helper.deleteHitokoto(sdb, id);
 	}
-
 
 }

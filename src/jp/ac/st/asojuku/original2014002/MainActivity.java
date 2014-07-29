@@ -64,7 +64,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		Intent intent = null;
 		switch(v.getId()) { //どのボタンが押されたか判定
 
-		case R.id.btn_DELETE://登録ボタンが押された
+		case R.id.btnENTRY://登録ボタンが押された
 			//エディットテキストからの入力内容を取り出す
 			EditText etv = (EditText)findViewById(R.id.EditText);
 			String inputMsg = etv.getText().toString();
@@ -78,7 +78,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 			// 入力欄をクリア
 			etv.setText("");
 			break;
-		case R.id.btnMAINTE_BACK: //メンテボタンが押された
+		case R.id.btnMAINTE: //メンテボタンが押された
 
 			//インテントのインスタンス生成
 			intent = new Intent(MainActivity.this, MaintenanceActivity.class);

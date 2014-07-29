@@ -18,7 +18,7 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper {
 	 */
    public MySQLiteOpenHelper(Context context) {
 
-	     super(context, "20140021201750.sqlite3" , null, 1);
+	     super(context, "20140021201750.sqlite3" , null, 2);
    }
 
 
@@ -33,7 +33,7 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper {
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 		// TODO 自動生成されたメソッド・スタブ
-		db.execSQL("drop table HitokotoActivity;");
+		db.execSQL("drop table Hitokoto;");
 		onCreate(db);
 
 	}
@@ -69,7 +69,7 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper {
 
 		String rtString = null;
 
-		String sqlstr = " SELECT _id, phrase FROM HitokotoActivity ORDER BY RANDOM(); ";
+		String sqlstr = " SELECT _id, phrase FROM Hitokoto ORDER BY RANDOM(); ";
 		try{
 			//トランザクション開始
 			SQLiteCursor cursor = (SQLiteCursor)db.rawQuery(sqlstr, null);
@@ -97,7 +97,7 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper {
 
 		SQLiteCursor cursor = null;
 
-		String sqlstr = "SELECT _id, phrase FROM HitokotoORDER BY _id;";
+		String sqlstr = "SELECT _id, phrase FROM Hitokoto ORDER BY _id;";
 		try {
 			cursor = (SQLiteCursor)db.rawQuery(sqlstr,null);
 			if(cursor.getCount()!=0){
